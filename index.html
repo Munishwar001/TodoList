@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"></Link>
+    <title>TODO List
+    </title>
+</head>
+
+<body> 
+    <nav>
+        <input type="search" id = "search" placeholder="Search Any Task Here 🔎"> <br>
+        <select id="filter" aria-label="Filter tasks">
+            <option value="all">All Tasks</option>
+            <option value="completed">Completed</option>
+            <option value="incomplete">Incomplete</option>
+        </select>
+        <button id="sortBtn">Sort By Status</button>
+
+    </nav>
+    <div id="container">
+        <h1>TODO List</h1>
+     <div id="add-section">
+        <div class="div1"><input type="text" id="input" placeholder="Add Task "><button id = "addBtn">Add</button>
+            <button id="clrBtn">ClearAll</button></div>
+     </div>
+     <div id="content">
+       <ul id = "ul">
+        <!-- <li>hello</li> -->
+       </ul>
+     </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

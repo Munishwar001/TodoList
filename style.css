@@ -1,0 +1,237 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f6f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    /* Align elements vertically */
+}
+
+#search {
+    width: 300px;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    margin-bottom: 20px;
+    /* Space between search bar and other content */
+}
+
+#search:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+#container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect for container */
+#container:hover {
+    transform: scale(1.02);
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+/* Add Task Section */
+#add-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.div1 {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+#input {
+    width: 75%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: all 0.3s;
+}
+
+#input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+#addBtn,
+#clrBtn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#addBtn {
+    background-color: #28a745;
+}
+
+#clrBtn {
+    background-color: #dc3545;
+}
+
+#addBtn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+#clrBtn:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+/* Task List */
+#content {
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+li:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+input[type="checkbox"] {
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+input[type="checkbox"]:checked {
+    transform: scale(1.2);
+}
+
+span {
+    flex-grow: 1;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Delete Button */
+button {
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+#filter,
+#sortBtn {
+    margin: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    #container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    /* Search Bar Styling */
+    #search {
+        width: 100%;
+        /* Ensure the search bar takes full width */
+        padding: 12px;
+        font-size: 1rem;
+        border-radius: 25px;
+        border: 1px solid #ddd;
+        margin-bottom: 20px;
+        /* Space between the search bar and other content */
+    }
+
+    #search:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    }
+
+    .div1 {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #input {
+        width: 100%;
+    }
+
+    #addBtn,
+    #clrBtn {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
